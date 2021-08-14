@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { animated } from 'react-spring';
 
 interface ConstainerProps {
   type?: 'success' | 'error' | 'info';
@@ -20,7 +21,7 @@ const toastTypeVariations = {
   `,
 };
 
-const Constainer = styled.div<ConstainerProps>`
+const Constainer = styled(animated.div)<ConstainerProps>`
   width: 360px;
   position: relative;
   padding: 16px 30px 16px 16px;
